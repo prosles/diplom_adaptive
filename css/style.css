@@ -14,9 +14,8 @@
 .header {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
-  
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -45,7 +44,7 @@
   flex-wrap: wrap;
   flex-direction: column;
 
-  padding: 25px 15px 98px 15px; 
+  padding: 30px 15px 98px 15px; 
 
   margin-left: auto;
   margin-right: auto;
@@ -65,7 +64,6 @@ a.menu-link:hover {
 
 
 .page-title {
-  /*margin-top: 70px;*/
   margin-left: auto;
   margin-right: auto;
   font-size: 45px;
@@ -94,24 +92,23 @@ a.menu-link:hover {
   color: #0f0d0e;
   text-align: center;
   position: relative;
-  margin-bottom: 1.4em;
+  margin-bottom: 2em;
   width: 10em;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .container-title-decoration:after {
   content: "";
   display: block;
   width: 3.5em;
-  height: 0.25em;
-  background-color: #e1d9bd;
+  height: 0.15em;
+  background-color: #b59f5b;
   opacity: 0.4;
 
   position: absolute;
-  top: 100%;
-  right: 3.75em;
+  top: 145%;
+  right: 3.3em;
 }
 
 .container {
@@ -140,13 +137,12 @@ a.menu-link:hover {
   position: relative;
 
   z-index: 1;
-
 }
 
 .container2-news,
 .container3-news,
 .container4-news {
-  margin-left: 0.25em;
+  margin-left: 3px;
 }
 
 .container1-news {
@@ -316,8 +312,6 @@ a.menu-link:hover {
   
   font-size: 0;
   padding-top: 0;
-
-
 }
 
 .widget-title {
@@ -686,9 +680,7 @@ a.menu-link:hover {
   line-height: 1.2;
   color: #0f0d0e;
   text-transform: uppercase;
-  margin-top: 35px;
-
-  /*   border: solid 1px red; */
+  margin-top: 35px; 
 }
 
 .product-footer {
@@ -698,8 +690,6 @@ a.menu-link:hover {
   justify-content: space-between;
   align-items: flex-end;
   padding-top: 25px;
-
-  /*   border: solid 1px black; */
 }
 
 .product-price {
@@ -746,7 +736,7 @@ a.menu-link:hover {
 /*cвойства для footer  */
 .footer {
   width: 100%;
-  margin: 0 auto 40px auto;
+  margin: 48px auto 40px auto;
 }
 
 .footer-link {
@@ -863,10 +853,16 @@ a.menu-link:hover {
 }
 
 
+/*Свойства  для popup*/
+
 .popup {
   width: 100%;
   height: 100vh;
   box-sizing: border-box;
+
+   padding-top: 240px;
+   padding-bottom: 240px;
+
   
   background-color: rgba(0, 0, 0, 0.6);
   overflow-y: auto;
@@ -875,34 +871,62 @@ a.menu-link:hover {
   top: 0;
   left: 0;
   display: flex;
+  flex-grow: 1;
 
   z-index: 99;
 }
 
 .popup-container {
   max-width: 390px;
-  width: 100%;
   margin: auto;
   
   background-color: #ffffff;
   position: relative;
-  
+
+  padding: 0 32px;
 }
 
 .feedback {
   background-color: #ffffff;
   color: #000000;  
-  margin-top: 50px;
+  margin-top: 46px;
   margin-bottom: auto;
 }
 
+.container-title-popup {
+
+  font-family: Bold;
+  
+  text-transform: uppercase;
+  color: #0f0d0e;
+  text-align: center;
+  position: relative;
+  margin-bottom: 1.7em;
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-title-popup:after {
+  content: "";
+  display: block;
+  width: 3.2em;
+  height: 0.2em;
+  background-color: #b59f5b;
+  opacity: 0.4;
+
+  position: absolute;
+  top: 120%;
+  right: 3.5em;
+}
+
+
 .form-group {
-  padding: 0 32px;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
 
 .select-group, .form-hint, .radio-group-text  {
-  font-size: Regular;
+  font-family: Regular;
   font-size: 13px;
   color: #000000;
   text-transform:  none;
@@ -911,7 +935,8 @@ a.menu-link:hover {
 .select {
   display: block;
   box-sizing: border-box;
-  width: 330px;
+
+  width: 100%;
   height: 48px;
   
   padding-left: 20px;
@@ -935,7 +960,7 @@ a.menu-link:hover {
   background-repeat: no-repeat;
   background-size: 10px;
   background-position:  center center;
-  background-position: right 5px center;
+  background-position: right 10px center;
 }
 
 .select:focus {
@@ -947,17 +972,16 @@ a.menu-link:hover {
 
 .popup-form-row {
   display: block;
-  margin-left: 32px;
-  width: 218px;
+  width: 230px;
 }
 
 .radio-group {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .radio-group-text::before {
-content: "";
+  content: "";
   display: inline-block;
   
   width: 15px;
@@ -971,7 +995,7 @@ content: "";
 
 .radio-group-text::before {
   display: inline-block; 
-vertical-align: middle;
+  vertical-align: middle;
 }     
 
 .radio-group-text::before {
@@ -979,7 +1003,7 @@ vertical-align: middle;
 }
 
 .radio-group:nth-of-type(n+2) {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .radio:checked ~ .radio-group-text::before {
   background-image: url("../svg/form-circle.svg");
@@ -993,25 +1017,25 @@ vertical-align: middle;
 } 
 
 .feedback-field {
-  margin-top: 38px;
-  padding-left: 32px;
-  width: 330px;
+  margin-top: 30px;
+  width: 100%;
 }
 
+
 .textarea {
-    width: 330px;
-    height: 130px;
+  width: 100%;
+  height: 130px;
 
   resize: none;
 }
 
 .textarea {
   box-sizing: border-box;
-  padding-top: 20px;
+  padding-top: 18px;
   padding-left: 20px;
   background-color: #f4f7f6;
   border: solid 1px #b59f5b;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 
@@ -1028,9 +1052,9 @@ vertical-align: middle;
 }
 
 .feedback-button {
-  width: 330px;
+  width: 100%;
   height: 48px;
-  margin: 26px 0 54px 32px;
+  margin: 26px 0 35px 0;
   
   background-color: #b59f5b;
   border-top: solid 2px #e6dfc8;
@@ -1070,8 +1094,13 @@ vertical-align: middle;
   height: 16px;
   
   position: absolute;
-  top: -20px;
+  top: -25px;
   right: 0px;  
+}
+
+.popup-close {
+  font-size: 0;
+  border: none;
 }
 
 .hidden {
@@ -1084,6 +1113,8 @@ vertical-align: middle;
 
 .header {
   background-image: url(../images/banner-bg.jpg);
+
+  height: 450px;
 }
 
 .container-header {
@@ -1111,6 +1142,7 @@ width: 100%;
 
 .menu {
   display: flex;
+  margin-top: 10px;
 }
 
 .menu-list-item {
@@ -1118,7 +1150,7 @@ width: 100%;
   flex-wrap: nowrap;
   vertical-align: baseline;
 
-  margin-right: 32px;
+  margin-right: 30px;
 }
 
 .menu-list-item:last-child {
@@ -1131,12 +1163,11 @@ width: 100%;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-
 }
 
 .page-title {
-  margin-top: 70px;
-  max-width: 687px;
+  margin-top: 100px;
+  max-width: 700px;
 }
 
 .title {
@@ -1148,17 +1179,16 @@ width: 100%;
 /*Для .section*/
 
 .section {
-  margin: 64px auto;
+  width: 100%;
+  margin: 55px auto;
 }
 
 .container1-news,
 .container2-news,
 .container3-news,
 .container4-news {
-  width: calc(25% - 15px);
-  min-height: 300px;
-  max-height: 348px;
-  height: 100%;
+  width: calc(25% - 9px);
+  height: 320px;
   flex-grow: 1;
 
   padding: 0 20px 15px 20px;
@@ -1169,7 +1199,7 @@ width: 100%;
 .container-new-three,
 .container-new-four {
   
-  padding: 36px 0 30px 30px;
+  padding: 12px 5px 30px 30px;
   width: 100%;
   flex-shrink: 1;
 }
@@ -1195,7 +1225,7 @@ width: 100%;
   justify-content: center;
   min-width: 1201px;
   width: 100%;
-  padding: 64px 15px 64px 15px;
+  padding: 0 15px 64px 15px;
 }
 
 .posts-preview:nth-child(n + 2) {
@@ -1227,40 +1257,40 @@ width: 100%;
   padding-right: 15px;
   }
 
-  .products {
-    margin: 0 auto;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box; 
-    padding-left: 3px;
-    padding-right: 3px;
+.products {
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box; 
+  padding-left: 3px;
+  padding-right: 3px;
   }
 
-  .product {
-    max-width: 336px;
-    width: 100%;
+.product {
+  max-width: 336px;
+  width: 100%;
   }
 
-  .product:nth-child(2) {
-    margin-left: 64px;
-    margin-right: 64px;
+.product:nth-child(2) {
+  margin-left: 64px;
+  margin-right: 64px;
   }
 
-  .product-imgbox {
-    max-width: 300px;
-    height: 200px;
+.product-imgbox {
+  max-width: 300px;
+  height: 200px;
   }
 
-  .footer {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
+  
 .footer {
   width: 1200px;
   padding: 0 15px;
+}
+
+.container-title-popup {
+  font-size: 20px;
 }
 
 }
@@ -1277,11 +1307,12 @@ width: 100%;
   max-width: 1200px;
   min-width: 641px;
   width: 100%;
+  padding-top: 44px;
+
 }
 
   .page-header {
-  padding: 0 35px;
- 
+  padding: 0 15px;
   justify-content: space-between;
 }
 
@@ -1297,24 +1328,28 @@ width: 100%;
   .menu-burger {
   display: block;
   height: 20px;
+  margin-top: 8px;
 }
 
   .b1, .b2, .b3 {
   
     width: 24px;
-    height: 5px;
+    height: 3px;
     background-color: #ffffff;
     margin: 5px;
 }
 
   .page-title {
-  margin-top: 100px;
-  max-width: 611px;
+  max-width: 615px;
+  margin-top: 85px;
+  margin-bottom: 15px;
 }
 
   .title {
   font-size: 0.889em;
   line-height: 1.375;
+
+
 }
 
 
@@ -1325,8 +1360,12 @@ width: 100%;
   max-width: 1200px;
   min-width: 641px;
 
-  margin-top: 50px;
+  margin-top: 42px;
   margin-bottom: 50px;
+}
+
+.container-title {
+  margin-bottom: 26px;
 }
 
 .container-title-decoration {
@@ -1354,7 +1393,7 @@ width: 100%;
   max-width: 1201px;
   width: 100%;
   padding: 0 35px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .posts-content {
@@ -1385,12 +1424,74 @@ width: 100%;
 
 .post-name-link {
   font-size: 0.85em;
+
+  margin-bottom: 26px;
 }
 
+.post-description {
+  margin-top: 25px;
+}
+
+.description:nth-child(1) {
+  margin-bottom: 5px ;
+}
 
 .last-post {
   width: 272px;
 }
+
+
+/*Свойства для aside*/
+
+.page-search {
+  margin-top: 63px;
+}
+
+.field-log-in {
+  margin-top: 15px;
+}
+
+.section-widget:nth-child(3) {
+  margin-bottom: 40px;
+}
+
+.keyword-link {
+
+  border: solid 4px #eeeeee;
+
+  padding: 3px 12px;
+}
+
+.keyword-item:nth-child(n + 4) {
+  margin-top: 6px;
+}
+
+.keyword-item {
+  margin-left: 7px;
+}
+
+.keyword-item:nth-child(n + 4) {
+  margin-top: 8px;
+}
+
+.keyword-item:nth-child(1) {
+  margin-left: 0;
+}
+
+.keyword-item:nth-child(4) {
+  margin-left: 0;
+}
+
+.keyword-item:nth-child(7) {
+  margin-left: 0;
+}
+
+
+.subject {
+  padding-top: 15px;
+}
+
+
 
 /*Свойства для section-footer*/
 
@@ -1404,6 +1505,10 @@ width: 100%;
   font-size: 20px;
   }
 
+  .section-footer-title {
+  margin-bottom: 5px;
+}
+
 .products {
   flex-wrap: wrap;
   flex-direction: row;
@@ -1415,21 +1520,26 @@ width: 100%;
   }
 
   .product {
-    width: 42.25%;
+    width: 45%;
   }
 
   .product:nth-child(3) {
-    margin-top: 26px;
+    margin-top: 20px;
   }
 
-  .product-imgbox,
-   {
-    width: 41.8%;
+  .product-title {
+    font-size: 17px;
+  }
+
+  .product-imgbox {
+    width: 38vw;
+    height: 29.56vw;
   }
 
   .product-img-preview {
-    width: 100%;
-    height: 100%;
+   
+    width: 38vw;
+    height: 29.56vw;
   }
 
 
@@ -1438,21 +1548,63 @@ width: 100%;
     width: 100%;
   }
 
-.footer {
-  max-width: 1200px;
-  min-width: 641px;
-  padding-left: 35px;
-  padding-right: 35px;
+ .product-footer {
+  margin-bottom: 10px;
+ }
 
+  .footer {
+   max-width: 1200px;
+   min-width: 641px;
+   padding-left: 35px;
+   padding-right: 35px;
+}
+
+.copyright {
+  margin-top: 50px;
+}
+
+.container-title-popup {
+  font-size: 18px;
+  margin-bottom: 2em;
+}
+
+.container-title-popup:after {
+  width: 3.7em;
+  height: 0.15em;
+  top: 135%;
+  right: 3.5em;
+}
+
+
+.radio-group-text::before {
+ 
+  width: 25px;
+  height: 25px;
+  background-size: 25px;
+}
+
+  .radio-group:nth-of-type(n+2) {
+  margin-left: 25px;
+}
+
+.popup-close:after {
+  
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+
+  top: -40px;
+   
 }
 }
 
 
 @media (max-width: 640px) {
+   
   .header {
   background-image: url(../images/banner-mobile.jpg);
   max-width: 640px;
-  min-width: 360px;
+  min-width: 320px;
   min-height: 639px ;
   width:  100%;
 
@@ -1471,8 +1623,8 @@ width: 100%;
 }
 
 .logo {
-max-width: 270px;
-width: 100%;
+  max-width: 270px;
+  width: 75vw;
 }
 
 .page-header {
@@ -1503,9 +1655,9 @@ width: 100%;
 }
 
 .page-title {
-  margin-top: 40px;
-  width: 320px;
-}
+    margin-top: 40px;
+    width: 88.8vw;
+    }
 
 .title {
   font-size: 0.578em;
@@ -1514,9 +1666,11 @@ width: 100%;
 
 /*Для .section*/
 
+
 .section {
   width:  100%;
-  margin: 44px auto;  
+ 
+  margin: 44px auto;
 }
 
 
@@ -1551,7 +1705,7 @@ width: 100%;
   align-items: center;
  
   width: 100%;
-  margin-top: 44px;
+  margin-top: 0;
 
   padding: 0 15px;
 }
@@ -1561,13 +1715,15 @@ width: 100%;
   
   border-bottom: solid 3px #eeeeee;
   padding-bottom: 20px;
-  margin-top: 33px;
   flex-wrap: wrap;
-  
+}
+
+.posts-preview:nth-child(n+2) {
+  margin-top: 33px;
 }
 
 .posts-preview:last-child {
-  margin-bottom: 44px;
+  margin-bottom: 0;
 }
 
 .post-photo,
@@ -1575,40 +1731,90 @@ width: 100%;
   width: 100%;
 }
 
+.category-list {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
 
 .post-name-link {
   font-size: 0.8em;
+  margin-bottom: 12px;
 }
 
 .post-description {
   font-size: 14px;
+  margin-top: 15px;
 }
 
+/*Свойства для main-aside*/
+
 .page-widget-aside {
-  width: 330px;
+  
+  width:  100%;
+  margin-top: 40px;
+  flex-grow: 1;
+}
+
+.widget-aside {
+   
+  width:  100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.section-widget {
+  margin-bottom: 44px;
+}
+
+.widget-title {
+  font-size: 16px;
+}
+
+.last-post {
+  margin-top: 45px;
+}
+
+.article {
+  margin-top: 20px;
+}
+
+.page-search {
+  margin-top: 65px;
 }
 
 .posts-keywords {
+  width: 100%;
+ }
 
-  width: 330px;
-
-}
+.keywords-list {
+  width: 100%;
+ } 
 
 .keyword-item:nth-child(n + 5) {
-  margin-top: 8px;
+  margin-top: 5px;
+  margin-left: 7px;
 } 
-
-.keyword-item:nth-child(1) {
-  margin-left: 0;
-}
 
 .keyword-item:nth-child(4) {
   margin-top: 0;
-  margin-left: 5px;
+  margin-left: 7px;
 }
 
 .keyword-item:nth-child(5) {
   margin-left: 0;
+}
+
+.keyword {
+  font-size: 3.33vw;
+}
+
+.list-subjects {
+  margin-top: 15px;
+}
+
+.subject {
+  padding-top: 12px;
 }
 
 .section-widget:nth-child(3){
@@ -1619,13 +1825,8 @@ width: 100%;
   align-items: center;
 }
 
-.keywords-list {
-  width:  100%;
-}
-
 .widget-title {
   margin: 0 auto;
-  width: 35%;
 }
 
 .tags {
@@ -1637,10 +1838,6 @@ width: 100%;
   right: calc(50% - 35px);
 }
 
-.page-widget-aside {
-  width:  100%;
-  flex-grow: 1;
-}
 
 /*Свойства для section-footer*/
 
@@ -1668,9 +1865,17 @@ width: 100%;
 .product:nth-child(2) {
   margin-top: 26px;
   margin-bottom: 26px;
-  }
+}
 
-  .product-imgbox {
+.products {
+  margin-top: 10px;
+}
+
+.product-title {
+  font-size: 17px;
+}
+
+.product-imgbox {
   width: 100%;
   height: 85.8%;
 
@@ -1678,27 +1883,99 @@ width: 100%;
   }
 
 
-  .product-img-preview {
-    width: 100%;
-    height: 100%;
+.product-img-preview {
+  width: 100%;
+  height: 100%;
   }
 
-  .product-content {
-    box-sizing: border-box;
-    width: 100%;
-    padding-right: 4px;
+.product-content {
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 4px;
   }
 
 
 /*Свойства для footer*/
 
 .footer {
-   margin-top: 84px;
+   margin-top: 45px;
 
-   width:100%;
+   width: 100%;
 
    padding-left: 15px;
    padding-right: 15px;
+}
+
+.copyright {
+  margin-top: 42px
+}
+
+/*Свойства для Popup*/
+
+.popup {
+  padding-top: 56px;
+}
+
+.popup-container {
+ max-width: 330px; 
+ width: 92vw;
+ padding: 0 23px;
+}
+
+.feedback {
+  margin-top: 25px;
+}
+
+.container-title-popup {
+  font-size: 16px;
+
+  margin-bottom: 2.2em;
+}
+
+.container-title-popup:after {
+  width: 4.1em;
+  height: 0.25em;
+  
+  top: 132%;
+  right: 3em;
+}
+
+.select { 
+  background-position: right 15px center;
+}
+
+.radio-group-text::before {
+  
+  width: 25px;
+  height: 25px;
+
+  
+  background-size: 25px;
+}
+
+.radio-group:nth-of-type(n+2) {
+  margin-left: 30px;
+}
+
+.select,
+.feedback-field, 
+.feedback-button,
+.textarea {
+  width: 100%;
+}
+
+.feedback-field {
+  margin-top: 25px;
+  }
+
+.popup-close:after {
+  background-size: 28px;
+  
+  width: 28px;
+  height: 28px;
+  
+  position: absolute;
+  top: -32px;
 }
 
 }
@@ -1718,7 +1995,6 @@ width: 100%;
 .container1-news {
   margin-left: 0;
 }
-
 
 .container2-news,
 .container3-news,
@@ -1745,7 +2021,6 @@ width: 100%;
   font-size: 2.2vw;
   line-height: 1.29;
 }
-
 }
 
 
@@ -1756,8 +2031,8 @@ width: 100%;
 .container3-news,
 .container4-news {
   width: calc(50% - 3px);
-  height: 12.4em;
-  padding: 0 17px 14px 17px;
+  height: 12.2em;
+  padding: 37px 20px 14px 17px;
   
 }
 
@@ -1773,7 +2048,7 @@ width: 100%;
 
 .container1-news,
 .container2-news {
-  margin-bottom: 0.25em;
+  margin-bottom: 0.15em;
 }
 
 .container-new-one,
@@ -1781,7 +2056,7 @@ width: 100%;
 .container-new-three,
 .container-new-four {
   width: 100%;
-  padding: 0 30px 28px 30px;
+  padding: 8px 30px 28px 30px;
 
 }
 
